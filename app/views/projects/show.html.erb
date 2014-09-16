@@ -1,0 +1,95 @@
+<%= render "layouts/header" %>
+
+
+
+<div class="container box">
+
+<!-- <p id="notice"><%= notice %></p> -->
+
+
+<div class="row">
+
+<div class="col-md-10 col-md-offset-1 project-show">
+
+<h1>Project Details</h1>
+
+
+
+<p>
+  <strong>Layout:</strong>
+</p>
+<% if @project.layout.url.include?('.pdf') %>
+<%= link_to "View Layout", @project.layout.url, :class => 'btn btn-primary' %>
+<% else %>
+  <%= image_tag @project.layout.url %>
+<% end %>
+
+<p><strong>Description:</strong></p>
+<p>
+  <%= simple_format(@project.description) %>
+</p>
+
+<p><strong>Budget:</strong></p>
+<p>
+  <%= simple_format(@project.budget) %>
+</p>
+
+<p><strong>Timeframe:</strong></p>
+<p>
+  <%= simple_format(@project.timeframe) %>
+</p>
+
+<p><strong>Zip:</strong></p>
+<p>
+  <%= @project.zip %>
+</p>
+
+
+
+</div>
+</div><!-- row -->
+<div class="row">
+  <div class="col-md-10 col-md-offset-1 project-show">
+<h3>Contact Information</h3>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-4 col-md-offset-1 project-show">
+    
+    <div id="clickContact" class="btn btn-primary">
+      Click to Show
+    </div>
+  </div>
+
+  <div id="showContact" class="col-md-2 contact hidden">
+    <p><strong>Name:</strong></p>
+    <p>
+      <%= @project.name %>
+    </p>
+    <p><strong>Email:</strong></p>
+    <p>
+      <%= @project.email %>
+    </p>
+    <p><strong>Phone:</strong></p>
+    <p>
+      <% if @project.phone.length > 0 %>
+      <%= @project.phone %>
+      <% else %>
+      Not Provided
+      <% end %>
+    </p>
+
+
+  
+  </div>
+
+
+
+
+  </div>
+</div><!-- row -->
+
+
+</div><!-- container -->
+
+<%= render "layouts/footer" %>

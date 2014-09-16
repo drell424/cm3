@@ -1,0 +1,53 @@
+<%= form_for @project, :url => projects_path, :html => { :multipart => true } do |f| %>
+
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+
+  
+
+  <div class="field">
+    <%= f.label :layout %><br>
+    <%= f.file_field :layout %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :budget %><br>
+    <%= f.text_field :budget %>
+  </div>
+  <div class="field">
+    <%= f.label :timeframe %><br>
+    <%= f.text_field :timeframe %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br>
+    <%= f.text_field :zip %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Submit', :class => 'btn btn-primary btn-submit' %>
+  </div>
+<% end %>
