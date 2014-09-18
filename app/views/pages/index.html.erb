@@ -6,7 +6,9 @@
 
             <div class="row one">
                 <%= image_tag "logo2.png", {:class => 'pull-left'} %>
-                
+                <div class="right dealer-btn">
+                <%= link_to "Cabinet Dealer?", new_dealer_path %>
+                </div>
 
                 <div class="col-md-8 col-md-offset-2 jumbo">
                     <h1>Buying cabinets just got easier!</h1>
@@ -54,13 +56,21 @@
                     <h3>Shopping for cabinets is a pain! We want to make it easier.</h3>
                     <p> By providing a layout and project details before visiting a dealers showroom you can save a lot of time. If the dealer is way out of budget or doesn't have the cabinet style you're looking for then everyone's time is wasted.  We allow you to know what you're getting before you walk through the door.</p>
                     <h4>** There is absolutely no obligation to purchase cabinets using our service. **</h4>
+                    
                 </div>
             </div><!-- row3 -->
-            
+            <div class="row four">
+                <div class="col-md-8 col-md-offset-2">
+
+            <div class="dealer-btn-mbl">
+                    <%= link_to "Cabinet Dealer?", new_dealer_path %>
+            </div>
+            </div>
+            </div><!-- row4 -->
         
         </div>
         <footer>
             
             <p class="left">&copy; 2014 CabMrkt</p>
-            <span class="italic right">Kitchen Cabinet Quotes Without the Legwork!</span>
+            <p class="italic right">Kitchen Cabinet Quotes Without the Legwork!</p>
         </footer>

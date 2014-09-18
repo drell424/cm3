@@ -40,6 +40,25 @@ html {
     line-height: 1.4;
 }
 
+/*Sticky Footer*/
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/*Sticky Footer*/
+#main-wrapper {
+    min-height: 100%;
+    padding: 0 0 50px;
+    position: relative;
+}
+
+/*autocomplete chrome*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -139,19 +158,12 @@ textarea {
     width: 100%;
     height: 500px; 
     background: url('bg.png') no-repeat;
-    background-size: 100%;
+
     opacity: .8;
     
 }
 
-.row.one {
-     margin-bottom: 110px;
-}
 
-.jumbo {
-    margin-top: 50px;
-    padding-bottom: 30px;
-}
 
 
 
@@ -165,9 +177,10 @@ textarea {
 .jumbo {
     
     background: url('jumbobg.png');
-    padding: 40px 0 40px 0;
-    
+    background-height: 300px;    
 }
+
+
 
 .jumbo input[type=submit] {
     background: none;
@@ -213,6 +226,14 @@ footer {
     color: white;
     margin-top: 50px;
     overflow: hidden;
+}
+
+footer {
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    width: 100%;
 }
 
 footer p {
@@ -307,6 +328,20 @@ box-shadow:         0px 5px 10px 0px rgba(50, 50, 50, 0.5);
     padding: 10px 30px;
 }
 
+.dealer-btn {
+    background-color: #333333;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    color: #ececec;
+    position: relative;
+    top: -5px; 
+    font-size: 16px;
+}
+
+.dealer-btn-mbl {
+        display: none;
+        
+    }
 
 
 
@@ -428,6 +463,52 @@ box-shadow:         0px 5px 10px 0px rgba(50, 50, 50, 0.5);
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-width: 20em) {
+    .jumbo {
+        position: relative;
+        top: 50px;
+    }
+
+
+    .jumbo h1,
+    .jumbo h3 {
+        position: relative;
+        top: -25px;
+    }
+
+    .jumbo .btn-success {
+        position: relative;
+        top: -35px;
+    }
+    
+    .row.two {
+        top: 40px;
+    }
+
+    footer .right {
+        display: none;
+    }
+
+    .dealer-btn {
+        display: none;
+    }
+
+    .dealer-btn-mbl {
+        display: inline-block;
+        background-color: #333333;
+        padding: 10px;
+        border-radius: 5px;
+        color: #ececec;
+        font-size: 16px;
+        margin: 0 auto;
+
+    }
+
+    .row.four {
+        text-align: center;
+    }
+}
+
 
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
@@ -436,6 +517,32 @@ box-shadow:         0px 5px 10px 0px rgba(50, 50, 50, 0.5);
         border-left: 1px solid #ccc;
     }
 
+    .row.one {
+     margin-bottom: 110px;
+    }
+
+    .jumbo {
+        margin-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .jumbo {
+    
+    background: url('jumbobg.png');
+    padding: 40px 0 40px 0;
+    
+    }
+    
+    .background {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 500px; 
+    background: url('bg.png') no-repeat;
+    background-size: 100%;
+    opacity: .8;
+    
+    }
   
 }
 

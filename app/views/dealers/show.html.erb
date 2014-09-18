@@ -1,0 +1,49 @@
+<%= render "layouts/header" %>
+
+
+
+<div class="container box">
+
+
+
+
+<div class="row">
+
+<div class="col-md-10 col-md-offset-1 project-show">
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dealer.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @dealer.email %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @dealer.company %>
+</p>
+
+<p>
+  <strong>Website:</strong>
+  <%= @dealer.website %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @dealer.phone %>
+</p>
+
+
+
+  </div>
+</div><!-- row -->
+
+
+</div><!-- container -->
+
+<%= render "layouts/footer" %>

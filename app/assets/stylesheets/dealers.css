@@ -1,0 +1,25 @@
+/* Place all the styles related to the Dealers controller here.
+They will automatically be included in application.css.
+You can use Sass (SCSS) here: http://sass-lang.com/ */
+
+.dealer-signup {
+	text-align: center;
+}
+
+.dealer-signup p {
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.2em;
+	padding-bottom: 10px;
+}
+
+.dealer-signup label {
+	font-size: 1.5em;
+
+}
+
+.dealer-signup .btn {
+	width: 25%;
+	font-size: 1.5em;
+}
+

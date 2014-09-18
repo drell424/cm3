@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  resources :dealers
+
   resources :projects
 
   devise_for :users
 
-  get '/submit' => 'high_voltage/pages#show', id: 'submit'  
+  get '/submit' => 'high_voltage/pages#show', id: 'submit' 
+  get '/dealer-signup' => 'high_voltage/pages#show', id: 'dealer-signup'  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

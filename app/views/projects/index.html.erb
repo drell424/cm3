@@ -1,10 +1,11 @@
 <%= render "layouts/header" %>
 
+<div class="container">
 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
 
 <h1>Listing projects</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -24,7 +25,7 @@
         <td><%= project.name %></td>
         <td><%= project.email %></td>
         <td><%= project.phone %></td>
-        <td><%= project.description %></td>
+        <td><%= truncate(project.description, length: 100) %></td>
         <td><%= project.budget %></td>
         <td><%= project.timeframe %></td>
         <td><%= project.zip %></td>
@@ -38,3 +39,7 @@
 
 <br>
 <%= link_to 'New Project', new_project_path %>
+
+</div><!-- container -->
+<%= render "layouts/footer" %>
+
